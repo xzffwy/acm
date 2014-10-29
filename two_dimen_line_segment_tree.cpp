@@ -3,7 +3,7 @@
 #define Er2(x,y) ((x>midl) && (midr>=y))//x2,y1
 #define Er3(x,y) ((midl>=x) && (y>midr))//x1,y2
 #define Er4(x,y) ((x>midl) && (y>midr))//x2,y2
-#define E(s,l1,r1,l2,r2) (a[s].x1>=l1 && a[s].y1>=r1 && a[s].x2<=l2 && a[s].y2<=r2)
+#define E(s,l1,r1,l2,r2) (a[s].x1>=l1 && a[s].y1>=r1 && a[s].x2<=l2 && a[s].y2<=r2)//矩形嵌套
 #define area(s) ((a[s].y2-a[s].y1+1)*(a[s].x2-a[s].x1+1))
 
 struct node{
@@ -12,7 +12,7 @@ struct node{
 node a[N*1600];
 
 int n=100;
-bool cross(int s,int l1,int r1,int l2,int r2)
+bool cross(int s,int l1,int r1,int l2,int r2)//判断两个矩形是否相交
 {
      int x1=max(a[s].x1,l1);
 	 int y1=max(a[s].y1,r1);
