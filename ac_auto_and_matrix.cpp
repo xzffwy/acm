@@ -3,8 +3,6 @@
 #define mod 100000
 int n,m;
 int nnum;//结构体只能访问全局，所以定义在了这里
-class pp;
-
 class pp{
 	public:
 		struct node{
